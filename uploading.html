@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload Page</title>
+  <link rel="stylesheet" href="Untitled-1.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(45deg, #ff6b6b, #6b47ff, #47ff6b);
+      background-size: 600% 600%;
+      animation: gradientAnimation 10s infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    #uploadForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #messageBox {
+      display: none;
+      border: 1px solid #66CDAA;
+      padding: 10px;
+      margin: 10px;
+      background-color: #E0FFFF;
+      border-radius: 5px;
+    }
+
+    #emailInput,
+    #messageInput {
+      margin-top: 15px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+      color: #333;
+      font-weight: bold;
+    }
+
+    input[type="file"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #66CDAA;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="color: white; text-align: center;">File Upload Page :-</h2>
+
+  <div id="messageBox">
+    <p>Please leave your file here.</p>
+  </div>
+
+  <form id="uploadForm">
+    <label for="fileInput" style="color: #333;">Choose File:</label>
+    <input type="file" id="fileInput" required placeholder=" Leave Your Opinion Here ... ">
+
+    <label for="email" style="color: #333;">Your Email:</label>
+    <input type="email" id="email" required placeholder="Please Leave Your Email ... <3">
+
+    <label for="message" style="color: #333;">Leave a Message:</label>
+    <textarea id="message" rows="4"></textarea>
+
+    <button type="button" onclick="uploadFile()">Upload File</button>
+  </form>
+
+  <script>
+    function showMessage(message) {
+      var messageBox = document.getElementById("messageBox");
+      messageBox.innerHTML = "<p>" + message + "</p>";
+      messageBox.style.display = "block";
+    }
+
+    function uploadFile() {
+      var fileInput = document.getElementById("fileInput");
+      var emailInput = document.getElementById("email");
+      var messageInput = document.getElementById("message");
+
+      if (fileInput.files.length === 0) {
+        showMessage("Please leave your file before uploading.");
+      } else {
+        showMessage("Thank you! We will answer you soon.");
+
+        // Additional logic for handling the file, email, and message data
+        var selectedFile = fileInput.files[0];
+        var userEmail = emailInput.value;
+        var userMessage = messageInput.value;
+
+        // You can send the file, email, and message data to the server or perform other actions here.
+      }
+    }
+  </script>
+
+</body>
+</html>

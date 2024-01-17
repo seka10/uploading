@@ -1,0 +1,270 @@
+/* ... (previous styles) */
+
+header {
+  background-color: #ff0505;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+
+
+*, :before, :after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font: inherit
+}
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.login-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container label {
+  margin-right: 10px;
+}
+
+.login-container input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.login-container button { height: -10px;
+  background-color: #1db8c3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+
+  font-family: Arial, sans-serif;
+  margin-bottom: 0.3cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+
+
+.login-container button:hover { 
+transform: translate(20px);
+top: 0cm;
+  background-color: rgb(32, 171, 41);
+}
+
+.btn {
+  margin-left: 0.2cm;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+.Registration {
+
+  font-size:  25px;;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.v1{
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5cm;
+  color:red  ;
+  text-align: center;
+}
+.v2{
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5cm;
+  color:rgb(177, 0, 0)  ;
+  text-align: center;
+}
+.v3{
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1cm;
+  color:rgb(110, 0, 0)  ;
+  text-align: center;
+}
+.v4 {
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.5cm;
+  color:rgb(21, 255, 0)  ;
+  text-align: center;
+}
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+  .loader:before,
+  .loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100;
+    left: 100;
+    right: 100;
+    bottom: 100;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+  }
+  .loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+.loader001 {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 480px;
+  height: 480px;
+  color: #fff;
+}
+  .loader001:before,
+  .loader001:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 100;
+    left: 100;
+    right: 100;
+    bottom: 100;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+  }
+  .loader001:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
